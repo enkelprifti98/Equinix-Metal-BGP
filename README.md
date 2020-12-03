@@ -1,6 +1,8 @@
 # Equinix-Metal-BGP
 
-## This project aims to make BGP setup easy for Equinix Metal customers. Here are the steps you need to follow:
+## This project aims to make BGP setup easy for Equinix Metal customers. This BGP automation script currently works across Ubuntu / Debian / CentOS Linux distributions.
+
+Here are the steps you need to follow:
 
 1. Create an Equinix Metal Organization and Project if you don't have one. Inside the project, you need to enable BGP found in the top bar under the "IPs & Networks" tab. You will have two options for BGP, Local and Global. Local BGP is used to announce Equinix owned IP space such as Elastic IPs. Global BGP is used to announce your own IP space if you have your own ASN.
 2. Once you have enabled BGP for your project, request Elastic IPs or bring your own IPs to the project.
