@@ -13,6 +13,49 @@
 
 `ip addr del x.x.x.x/xx dev lo`
 
-Note: The IPs added to the `lo` interface using the above command aren't persistent across reboots. If you want to make them persistent, you will need to modify the network configuration files for each respective operating system. You can find examples on network configuration files for persistence and info on requesting Elastic IPs [here](https://metal.equinix.com/developers/docs/networking/elastic-ips/).
+Note: The IPs added to the `lo` interface using the above command aren't persistent across reboots. If you want to make them persistent, you will need to modify the network configuration files for each respective operating system. You can find examples on network configuration files for persistence and info on requesting Elastic IPs [here](https://metal.equinix.com/developers/docs/networking/elastic-ips/). I have also added examples here:
+
+Using a sample IP address of 147.75.255.255, the following configuration will make the IP address permanent on your server:
+
+## Ubuntu/Debian
+Add to /etc/network/interfaces:
+
+```
+auto lo:0
+iface lo:0 inet static
+    address 147.75.255.255
+    netmask 255.255.255.255
+```
+
+Then run `ifup lo:0`.
+
+## Ubuntu/Debian (netplan)
+Add to /etc/netplan/00-elastic.yaml:
+
+```
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    lo:
+      addresses:
+        - 127.0.0.1/8
+        - 147.75.255.255/32
+```
+then either `sudo netplan try` or `sudo netplan apply`
+
+## CentOS
+Add to /etc/sysconfig/network-scripts/ifcfg-lo:0:
+
+```
+DEVICE="lo:0"
+BOOTPROTO="static"
+IPADDR=147.75.255.255
+NETMASK=255.255.255.255
+NETWORK=147.75.255.255
+ONBOOT=yes
+```
+
+Then run `ifup lo:0`.
 
 Your IPs should now be reachable! You can also announce the same IPs from multiple instances by following the same steps.
