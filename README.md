@@ -15,7 +15,7 @@
 
 Note: The IPs added to the `lo` interface using the above command aren't persistent across reboots. If you want to make them persistent, you will need to modify the network configuration files for each respective operating system. You can find examples on network configuration files for persistence and info on requesting Elastic IPs [here](https://metal.equinix.com/developers/docs/networking/elastic-ips/). I have also added examples here:
 
-Using a sample IP address of 147.75.255.255, the following configuration will make the IP address permanent on your server:
+Using a sample IP address of 147.75.255.255/32, the following configuration will make the IP address permanent on your server:
 
 ## Ubuntu/Debian
 Add to /etc/network/interfaces:
