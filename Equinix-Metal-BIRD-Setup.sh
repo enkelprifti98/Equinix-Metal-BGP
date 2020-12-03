@@ -7,8 +7,8 @@ auth_token=EM-API-TOKEN
 # NOTE: Make sure you have Local BGP enabled for the Equinix Metal project..
 
 #Example on adding/deleting IPs that you're announcing to the loopback interface:
-#ip addr add x.x.x.x/xx dev lo:0
-#ip addr del x.x.x.x/xx dev lo:0
+#ip addr add x.x.x.x/xx dev lo
+#ip addr del x.x.x.x/xx dev lo
 
 # Detect Operating System
 function dist-check() {
