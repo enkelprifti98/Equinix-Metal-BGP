@@ -6,7 +6,7 @@ auth_token=EM-API-TOKEN
 
 # NOTE: Make sure you have Local BGP enabled for the Equinix Metal project..
 
-# NOTE: This script currently only works for Ubuntu / Debian / CentOS
+# NOTE: This script currently only works for Ubuntu / Debian / CentOS / AlmaLinux / Rocky Linux
 
 #Example on adding/deleting IPs that you're announcing to the loopback interface:
 #ip addr add x.x.x.x/xx dev lo
