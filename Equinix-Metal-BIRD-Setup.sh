@@ -4,7 +4,7 @@
 
 auth_token=EM-API-TOKEN
 
-# NOTE: Make sure you have Local BGP enabled for the Equinix Metal project..
+# NOTE: Make sure you have BGP enabled for the Equinix Metal project..
 
 # NOTE: This script currently only works for Ubuntu / Debian / CentOS / AlmaLinux / Rocky Linux
 
