@@ -14,7 +14,7 @@ Here are the steps you need to follow:
 4. Generate a Personal API token.
    * The API token will be used to enable BGP for the instances that you deploy or have already deployed. You can generate an API token by going to the upper right corner avatar, there is a "Personal API Keys" section there to generate your own API token.
 5. Copy [this](https://raw.githubusercontent.com/enkelprifti98/Equinix-Metal-BGP/main/Equinix-Metal-BIRD-Setup.sh) bash script and modify the `auth_token` variable at the beginning so that it is set to your own API token.
-6. Create an instance and simply paste the bash script in this repository into the user data field or you can just run the bash script in an already running instance.
+6. Create an instance and paste the bash script into the user data field or you can just run the bash script in an already running instance.
 7. Once the script has finished, you can now add Elastic IP addresses or your own IPs to the OS loopback interface so that the BIRD BGP speaker starts to announce them. Here's an example on how to add and delete IPs to the loopback interface:
 
 `ip addr add x.x.x.x/xx dev lo`
