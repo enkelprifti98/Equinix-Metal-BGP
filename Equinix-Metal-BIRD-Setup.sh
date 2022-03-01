@@ -35,7 +35,7 @@ dist-check
       apt-get update
       apt-get install bird jq -y
       if [ "$DISTRO_VERSION" == "16.04" ]; then
-        BIRD_VERSION=1  
+        BIRD_VERSION=1
         BIRD_CONFIG_PATH=/etc/bird/bird.conf
       elif [ "$DISTRO_VERSION" == "18.04" ]; then
         BIRD_VERSION=1
@@ -52,7 +52,7 @@ dist-check
       apt-get update
       apt-get install bird jq -y
       if [ "$DISTRO_VERSION" == "8" ]; then
-        BIRD_VERSION=1  
+        BIRD_VERSION=1
         BIRD_CONFIG_PATH=/etc/bird/bird.conf
       elif [ "$DISTRO_VERSION" == "9" ]; then
         BIRD_VERSION=1
