@@ -75,6 +75,18 @@ dist-check
         BIRD_VERSION=2
         BIRD_CONFIG_PATH=/etc/bird.conf
       fi
+    elif [ "$DISTRO" == "almalinux" ]; then
+      yum install epel-release -y
+      yum install bird jq -y
+      if [ "$DISTRO_VERSION" == "8.5" ]; then
+        BIRD_VERSION=2
+        BIRD_CONFIG_PATH=/etc/bird.conf
+    elif [ "$DISTRO" == "rocky" ]; then
+      yum install epel-release -y
+      yum install bird jq -y
+      if [ "$DISTRO_VERSION" == "8.5" ]; then
+        BIRD_VERSION=2
+        BIRD_CONFIG_PATH=/etc/bird.conf
     fi
   }
 
