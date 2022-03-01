@@ -11,7 +11,7 @@ Here are the steps you need to follow:
    * The BGP setting can be found at the top bar under the "IPs & Networks" tab. You will have two options for BGP, Local and Global. Local BGP is used to announce Equinix owned IP space such as Elastic IPs. Global BGP is used to announce your own IP space if you have your own ASN.
 3. Request Elastic IPs or bring your own IPs.
    * If you are bringing your own IPs, make sure you have route objects defined in your IRR. Your subnets should appear under the Global IP ranges section of the project BGP configuration page.
-4. Generate an account API token.
+4. Generate a Personal API token.
    * The API token will be used to enable BGP for the instances that you deploy or have already deployed. You can generate an API token by going to the upper right corner avatar, there is a "Personal API Keys" section there to generate your own API token.
 5. Modify the `auth_token` variable at the top of the bash script so that it is set to your own API token.
 6. Create an instance and simply paste the bash script in this repository into the user data field or you can just run the bash script in an already running instance.
