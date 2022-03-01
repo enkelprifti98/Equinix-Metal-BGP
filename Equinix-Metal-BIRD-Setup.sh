@@ -234,7 +234,7 @@ printf "\n"
 systemctl enable bird
 systemctl restart bird
 
-printf "Enabled BIRD you should be good to go"
+printf "Enabled BIRD you should be good to go!\n"
 
 
 
