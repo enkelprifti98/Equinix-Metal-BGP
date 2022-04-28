@@ -46,6 +46,9 @@ dist-check
       elif [ "$DISTRO_VERSION" == "21.04" ]; then
         BIRD_VERSION=1
         BIRD_CONFIG_PATH=/etc/bird/bird.conf
+      elif [ "$DISTRO_VERSION" == "22.04" ]; then
+        BIRD_VERSION=1
+        BIRD_CONFIG_PATH=/etc/bird/bird.conf
       fi
     # shellcheck disable=SC2235
     elif [ "$DISTRO" == "debian" ]; then
