@@ -50,7 +50,6 @@ distcheck
         BIRD_VERSION=1
         BIRD_CONFIG_PATH=/etc/bird/bird.conf
       fi
-    # shellcheck disable=SC2235
     elif [ "$DISTRO" == "debian" ]; then
       apt-get update
       apt-get install bird jq -y
@@ -67,7 +66,6 @@ distcheck
         BIRD_VERSION=1
         BIRD_CONFIG_PATH=/etc/bird/bird.conf
       fi
-    # shellcheck disable=SC2235
     elif [ "$DISTRO" == "centos" ]; then
       yum install epel-release -y
       yum install bird jq -y
