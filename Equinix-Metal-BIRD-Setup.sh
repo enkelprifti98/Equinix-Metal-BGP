@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # !!! Set your Equinix Metal API Token !!!
 
