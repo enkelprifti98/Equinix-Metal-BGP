@@ -10,6 +10,7 @@
 * Rocky Linux
 * Red Hat Enterprise Linux
 * Alpine
+  * Bash required: apk add bash 
 
 Here are the steps you need to follow:
 
