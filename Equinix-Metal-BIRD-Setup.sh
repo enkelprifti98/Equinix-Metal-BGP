@@ -92,6 +92,17 @@ distcheck
         BIRD_VERSION=2
         BIRD_CONFIG_PATH=/etc/bird.conf
       fi
+    elif [ "$DISTRO" == "rhel" ]; then
+      if [ "$DISTRO_VERSION" == "7.9" ]; then
+        yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+        BIRD_VERSION=1
+        BIRD_CONFIG_PATH=/etc/bird.conf
+      elif [ "$DISTRO_VERSION" == "8.4" ]; then
+        dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+        BIRD_VERSION=2
+        BIRD_CONFIG_PATH=/etc/bird.conf
+      fi
+      yum install bird jq -y
     elif [ "$DISTRO" == "alpine" ]; then
       apk add --no-cache ca-certificates curl jq bird
       if [ "$DISTRO_VERSION" == "3.15.4" ]; then
