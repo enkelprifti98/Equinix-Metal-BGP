@@ -93,7 +93,7 @@ distcheck
         BIRD_CONFIG_PATH=/etc/bird.conf
       fi
     elif [ "$DISTRO" == "alpine" ]; then
-      apk add --no-cache ca-certificates bash curl jq bird
+      apk add --no-cache ca-certificates curl jq bird
       if [ "$DISTRO_VERSION" == "3.15.4" ]; then
         BIRD_VERSION=2
         BIRD_CONFIG_PATH=/etc/bird.conf
