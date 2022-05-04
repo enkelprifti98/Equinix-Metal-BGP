@@ -49,6 +49,9 @@ distcheck
       elif [ "$DISTRO_VERSION" == "22.04" ]; then
         BIRD_VERSION=1
         BIRD_CONFIG_PATH=/etc/bird/bird.conf
+      else
+        BIRD_VERSION=1
+        BIRD_CONFIG_PATH=/etc/bird/bird.conf
       fi
     elif [ "$DISTRO" == "debian" ]; then
       apt-get update
@@ -65,6 +68,9 @@ distcheck
       elif [ "$DISTRO_VERSION" == "11" ]; then
         BIRD_VERSION=1
         BIRD_CONFIG_PATH=/etc/bird/bird.conf
+      else
+        BIRD_VERSION=1
+        BIRD_CONFIG_PATH=/etc/bird/bird.conf
       fi
     elif [ "$DISTRO" == "centos" ]; then
       yum install epel-release -y
@@ -75,6 +81,9 @@ distcheck
       elif [ "$DISTRO_VERSION" == "8" ]; then
         BIRD_VERSION=2
         BIRD_CONFIG_PATH=/etc/bird.conf
+      else
+        BIRD_VERSION=2
+        BIRD_CONFIG_PATH=/etc/bird.conf
       fi
     elif [ "$DISTRO" == "almalinux" ]; then
       yum install epel-release -y
@@ -82,11 +91,17 @@ distcheck
       if [ "$DISTRO_VERSION" == "8.5" ]; then
         BIRD_VERSION=2
         BIRD_CONFIG_PATH=/etc/bird.conf
+      else
+        BIRD_VERSION=2
+        BIRD_CONFIG_PATH=/etc/bird.conf
       fi
     elif [ "$DISTRO" == "rocky" ]; then
       yum install epel-release -y
       yum install bird jq -y
       if [ "$DISTRO_VERSION" == "8.5" ]; then
+        BIRD_VERSION=2
+        BIRD_CONFIG_PATH=/etc/bird.conf
+      else
         BIRD_VERSION=2
         BIRD_CONFIG_PATH=/etc/bird.conf
       fi
@@ -99,11 +114,18 @@ distcheck
         dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
         BIRD_VERSION=2
         BIRD_CONFIG_PATH=/etc/bird.conf
+      else
+        dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+        BIRD_VERSION=2
+        BIRD_CONFIG_PATH=/etc/bird.conf
       fi
       yum install bird jq -y
     elif [ "$DISTRO" == "alpine" ]; then
       apk add --no-cache ca-certificates curl jq bird
       if [ "$DISTRO_VERSION" == "3.15.4" ]; then
+        BIRD_VERSION=2
+        BIRD_CONFIG_PATH=/etc/bird.conf
+      else
         BIRD_VERSION=2
         BIRD_CONFIG_PATH=/etc/bird.conf
       fi
