@@ -13,7 +13,7 @@ auth_token=EM-API-TOKEN
 #ip addr del x.x.x.x/xx dev lo
 
 # Detect Operating System
-function dist-check() {
+function distcheck() {
   # shellcheck disable=SC1090
   if [ -e /etc/os-release  ]; then
     # shellcheck disable=SC1091
@@ -25,10 +25,10 @@ function dist-check() {
 }
 
 # Check Operating System
-dist-check
+distcheck
 
-# Install pre-requisites (parted and filesystem packages)
-  function install-prerequisites() {
+# Install prerequisites (parted and filesystem packages)
+  function installprerequisites() {
     # Installation begins here
     # shellcheck disable=SC2235
     if [ "$DISTRO" == "ubuntu" ]; then
@@ -102,7 +102,7 @@ dist-check
   }
 
 # Install prerequisites
-install-prerequisites
+installprerequisites
 
 # Get instance UUID through metadata
 instance_id=$(curl https://metadata.platformequinix.com/metadata | jq -r ".id")
