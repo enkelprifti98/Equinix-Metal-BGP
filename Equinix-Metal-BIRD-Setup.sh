@@ -255,12 +255,10 @@ printf "\n"
 
 # Start BIRD
 if [ "$DISTRO" == "alpine" ]; then
-rc-update add bird
-rc-service bird start
-bird
+    bird
 else
-systemctl enable bird
-systemctl restart bird
+    systemctl enable bird
+    systemctl restart bird
 fi
 
 printf "\n \nEnabled BIRD you should be good to go!\n \n"
