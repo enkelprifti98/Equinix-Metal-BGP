@@ -254,8 +254,12 @@ cat $BIRD_CONFIG_PATH
 printf "\n"
 
 # Start BIRD
+if [ "$DISTRO" == "alpine" ]; then
+rc-service bird start
+else
 systemctl enable bird
 systemctl restart bird
+fi
 
 printf "\n \nEnabled BIRD you should be good to go!\n \n"
 
