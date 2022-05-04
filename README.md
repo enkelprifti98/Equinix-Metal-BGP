@@ -2,7 +2,14 @@
 
 ## This project aims to make BGP setup easy for Equinix Metal customers. 
 
-### NOTE: This BGP automation script currently works across Ubuntu / Debian / CentOS / AlmaLinux / Rocky Linux / Red Hat Enterprise Linux / Alpine distributions.
+### NOTE: This BGP automation script currently works across the following Linux distributions:
+* Ubuntu
+* Debian
+* CentOS
+* AlmaLinux
+* Rocky Linux
+* Red Hat Enterprise Linux
+* Alpine
 
 Here are the steps you need to follow:
 
