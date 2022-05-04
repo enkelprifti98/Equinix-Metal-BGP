@@ -133,6 +133,13 @@ peer2=$(echo $json | jq -r .bgp_neighbors[0].peer_ips[1])
 peerAs=$(echo $json | jq -r .bgp_neighbors[0].peer_as)
 customerIp=$(echo $json | jq -r .bgp_neighbors[0].customer_ip)
 
+# Add static routes needed to reach the BGP peers
+GATEWAY_IP=$(echo $json | jq -r '.network.addresses[] | select(.public == false and .address_family == 4) | .gateway')
+PEERS=$(echo $json | jq -r '.bgp_neighbors[0].peer_ips[]')
+for i in ${PEERS}; do
+ip route add ${i} via $GATEWAY_IP
+done
+
 
 if [ "$BIRD_VERSION" == "1" ]; then
 
