@@ -2,7 +2,7 @@
 
 ## This project configures BGP for Equinix Metal instances. 
 
-### NOTE: This BGP automation script currently works across the following Linux distributions:
+### NOTE: This BGP configuration script currently works across the following Linux distributions:
 * Ubuntu
 * Debian
 * CentOS
