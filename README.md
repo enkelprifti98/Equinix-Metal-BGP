@@ -1,6 +1,6 @@
 # Equinix-Metal-BGP
 
-## This project aims to make BGP setup easy for Equinix Metal customers. 
+## This project configures BGP for Equinix Metal instances. 
 
 ### NOTE: This BGP automation script currently works across the following Linux distributions:
 * Ubuntu
