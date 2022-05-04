@@ -10,7 +10,7 @@
 * Rocky Linux
 * Red Hat Enterprise Linux
 * Alpine
-  * Bash required: `apk add bash`
+  * Bash required: `apk add bash` or replace [#!/bin/bash](https://github.com/enkelprifti98/Equinix-Metal-BGP/blob/main/Equinix-Metal-BIRD-Setup.sh#L1) with `#!/bin/sh`
 
 Here are the steps you need to follow:
 
