@@ -86,7 +86,7 @@ If your BGP session is not able to be established, you can follow the following 
    route 169.254.255.1/32 via 10.x.x.x;
    route 169.254.255.2/32 via 10.x.x.x;
    ```
-   Here's a sample method for adding the static routes:
+   Here's a sample method for adding the static routes in bash:
    ```bash
    GATEWAY_IP=$(curl https://metadata.platformequinix.com/metadata | jq -r '.network.addresses[] | select(.public == false and .address_family == 4) | .gateway')
    PEERS=$(curl https://metadata.platformequinix.com/metadata | jq -r '.bgp_neighbors[0].peer_ips[]')
