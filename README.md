@@ -80,7 +80,7 @@ Your IPs should now be reachable! You can also announce the same IPs from multip
 
 If your BGP session is not able to be established, you can follow the following tips for troubleshooting.
 
-1. Make sure that the Private IPv4 10.x.x.x Layer 3 management network is assigned to the host interface as BGP traffic with the Equinix Metal Top of Rack router is only allowed through that network.
+1. Make sure that the Private IPv4 10.x.x.x Layer 3 management network is assigned to the host interface as BGP traffic with the Equinix Metal Top of Rack router is only allowed through that network. More specifically, BGP is only allowed with the host IP so if you have a larger subnet size such as a /29, only the first / host IP will be able to establish a BGP session with the Equinix Metal Top of Rack routers.
 2. Check if the following static routes are added to the host OS route table: (The 10.x.x.x IP should match with your server's private IPv4 gateway address.)
    ```
    route 169.254.255.1/32 via 10.x.x.x;
