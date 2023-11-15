@@ -96,3 +96,4 @@ If your BGP session is not able to be established, you can follow the following 
    ```
 4. Ensure that you don't have any firewall rules that are blocking traffic through TCP port 179 which is used for BGP sessions.
 5. Verify that you are not crossing the BGP maximum prefix limit. On the server BGP speaker side, you will see an error along the lines of "Maximum Number of Prefixes Reached". The default limit of maximum prefixes per server instance/neighbor on the Top of Rack switches/routers is 10 prefixes. The maximum prefixes limit can be increased by making a request to the Equinix Metal support team.
+6. Multihop is required so check that you have it enabled for the BGP peer.
