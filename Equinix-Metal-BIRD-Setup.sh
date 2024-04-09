@@ -1,8 +1,17 @@
 #!/bin/bash
 
 # !!! Set your Equinix Metal API Token !!!
+# Set the following EM_API_TOKEN variable if you're not using the METAL_AUTH_TOKEN environment variable
 
-auth_token=EM-API-TOKEN
+# EM_API_TOKEN=YourAPItoken
+
+env | grep METAL_AUTH_TOKEN > /dev/null
+if [ $? -eq 0 ]; then
+  echo "Reading Equinix Metal API key from METAL_AUTH_TOKEN environment variable"
+  auth_token=$METAL_AUTH_TOKEN
+else
+  auth_token=$EM_API_TOKEN
+fi
 
 # NOTE: Make sure you have BGP enabled for the Equinix Metal project..
 
