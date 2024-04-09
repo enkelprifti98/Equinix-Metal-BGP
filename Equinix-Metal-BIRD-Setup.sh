@@ -15,7 +15,7 @@ fi
 
 OUTPUT=$(curl -s "https://api.equinix.com/metal/v1/user/api-keys" \
         -X GET \
-        -H "X-Auth-Token: $AUTH_TOKEN")
+        -H "X-Auth-Token: $auth_token")
 sleep 1
 if (echo $OUTPUT | jq -e 'has("error")' > /dev/null); then
         echo $OUTPUT | jq
