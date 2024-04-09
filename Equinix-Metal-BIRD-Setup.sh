@@ -13,6 +13,15 @@ else
   auth_token=$EM_API_TOKEN
 fi
 
+OUTPUT=$(curl -s "https://api.equinix.com/metal/v1/user/api-keys" \
+        -X GET \
+        -H "X-Auth-Token: $AUTH_TOKEN")
+sleep 1
+if (echo $OUTPUT | jq -e 'has("error")' > /dev/null); then
+        echo $OUTPUT | jq
+        exit
+fi
+
 # NOTE: Make sure you have BGP enabled for the Equinix Metal project..
 
 # NOTE: This script currently only works for Ubuntu / Debian / CentOS / AlmaLinux / Rocky Linux
