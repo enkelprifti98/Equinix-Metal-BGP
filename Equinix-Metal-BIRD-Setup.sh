@@ -2,7 +2,11 @@
 
 # !!! Set your Equinix Metal API Token !!!
 
-auth_token=EM-API-TOKEN
+if [[ -z "$METAL_AUTH_TOKEN" ]]; then
+        auth_token=EM-API-TOKEN
+else
+        auth_token=$METAL_AUTH_TOKEN
+fi
 
 # NOTE: Make sure you have BGP enabled for the Equinix Metal project..
 
