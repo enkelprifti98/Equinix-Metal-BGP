@@ -24,7 +24,7 @@ fi
 
 # NOTE: Make sure you have BGP enabled for the Equinix Metal project..
 
-# NOTE: This script currently only works for Ubuntu / Debian / CentOS / AlmaLinux / Rocky Linux
+# NOTE: This script currently only works for Ubuntu / Debian / CentOS / AlmaLinux / Rocky Linux / Red Hat Enterprise Linux / Alpine
 
 #Example on adding/deleting IPs that you're announcing to the loopback interface:
 #ip addr add x.x.x.x/xx dev lo
