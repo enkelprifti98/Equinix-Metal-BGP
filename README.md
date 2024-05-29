@@ -76,7 +76,7 @@ ONBOOT=yes
 
 Then run `ifup lo:0`.
 
-Your IPs should now be reachable! You can also announce the same IPs from multiple instances by following the same steps.
+Your IPs should now be reachable! You can also announce the same IPs from multiple server instances by following the same steps so you get Equal Cost Multi Path (ECMP) routing / traffic balancing.
 
 ## Troubleshooting
 
