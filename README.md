@@ -20,7 +20,7 @@ Here are the steps you need to follow:
        * Local BGP is used to announce Equinix owned IP space such as Elastic IPs.
        * Global BGP is used to announce your own IP space if you have your own ASN.
 3. Request Elastic IPs or bring your own IPs.
-   * If you are bringing your own IPs, make sure you have route objects defined in your IRR. Your subnets should appear under the Global IP ranges section of the project BGP configuration page.
+   * If you are bringing your own IPs, make sure you have route objects defined in your Internet Routing Registry (IRR). Your subnets should appear under the Global IP ranges section of the project BGP configuration page.
 4. Generate a Personal API token.
    * The API token will be used to enable BGP for the instances that you deploy or have already deployed. You can generate an API token by going to the upper right corner avatar, there is a "Personal API Keys" section there to generate your own API token.
 5. Copy [this](https://raw.githubusercontent.com/enkelprifti98/Equinix-Metal-BGP/main/Equinix-Metal-BIRD-Setup.sh) bash script and modify the [`auth_token`](https://github.com/enkelprifti98/Equinix-Metal-BGP/blob/main/Equinix-Metal-BIRD-Setup.sh#L5) variable at the beginning so that it is set to your own API token.
