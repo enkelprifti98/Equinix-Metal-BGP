@@ -16,7 +16,7 @@ Here are the steps you need to follow:
 
 1. Create an Equinix Metal Organization and a Project inside the Organization.
 2. Enable BGP for the project.
-   * The BGP setting can be found at the top bar under the "IPs & Networks" tab. You will have two options for BGP, Local and Global. Local BGP is used to announce Equinix owned IP space such as Elastic IPs. Global BGP is used to announce your own IP space if you have your own ASN.
+   * The project BGP setting can be found on the left sidebar under the `Networking` section. When clicking the activate BGP button you will have two options, Local and Global. Local BGP is used to announce Equinix owned IP space such as Elastic IPs. Global BGP is used to announce your own IP space if you have your own ASN.
 3. Request Elastic IPs or bring your own IPs.
    * If you are bringing your own IPs, make sure you have route objects defined in your IRR. Your subnets should appear under the Global IP ranges section of the project BGP configuration page.
 4. Generate a Personal API token.
